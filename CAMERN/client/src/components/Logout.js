@@ -3,10 +3,11 @@ import { useHistory } from "react-router-dom";
 import { UserContext } from "../App";
 
 const Logout = () => {
-  // promises
+  // datd fetch using promises
   const { dispatch } = useContext(UserContext);
   const history = useHistory();
 
+  //Access data from database for logout with GET method
   useEffect(() => {
     fetch("/logout", {
       method: "GET",
