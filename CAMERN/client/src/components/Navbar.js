@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import { UserContext } from "../App";
 
+//style for logo 
 const style = {
   width: "30px",
   height: "30px",
@@ -13,6 +14,7 @@ const style = {
 const Navbar = () => {
   const { state } = useContext(UserContext);
 
+  //display login/logout button with checking user current status
   const RenderList = () => {
     if (state) {
       return (
