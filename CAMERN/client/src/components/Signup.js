@@ -31,6 +31,7 @@ const Signup = () => {
     setUser({ ...user, [name]: value });
   };
 
+  //send new user data to db and check user already exits or not
   const PostData = async (e) => {
     e.preventDefault();
 
@@ -53,7 +54,8 @@ const Signup = () => {
 
     const data = await res.json();
 
-    // I need to change the data to res
+    // I need to change the data to responce
+    
     if (data.status === 422 || !data) {
       window.alert("INvalid Registration");
       console.log("INvalid Registration");
