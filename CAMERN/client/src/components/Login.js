@@ -11,6 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // Send user details to the database
   const loginUser = async (e) => {
     e.preventDefault();
 
@@ -27,6 +28,7 @@ const Login = () => {
 
     const data = res.json();
 
+    //check user login or not
     if (res.status === 400 || !data) {
       window.alert("Invalid Credentials");
     } else {
